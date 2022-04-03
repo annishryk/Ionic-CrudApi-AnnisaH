@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-title align="center">
+          Tabel - Data Mahasiswa
+      </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <table class="table table-striped">
+      <thead class="table mb-0"> 
+        <tr>
+            <th scope="col" align="center">No</th><p> </p>
+            <th scope="col" align="center">NPM</th><p> </p>
+            <th scope="col" align="center">Nama</th><p> </p>
+            <th scope="col" align="center">Jurusan</th><p> </p>
+            <th scope="col" align="center">Prodi</th><p> </p>
+            <th scope="col" align="center">Kelas</th><p> </p>
+            <th scope="col" align="center">Keterangan</th><p> </p>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let siswa of GETSiswa; let i=index;">
+            <td scope="row" align="center">{{i+1}}</td><p></p>
+            <td align="center">{{siswa.npm}}</td><p></p>
+            <td align="center">{{siswa.nama}}</td><p></p>
+            <td align="center">{{siswa.jurusan}}</td><p> </p>
+            <td align="center">{{siswa.prodi}}</td><p> </p>
+            <td align="center">{{siswa.kelas}}</td><p></p>
+            <td align="center"> <a routerLink="/edit-mahasiswa"><ion-icon name="create"></ion-icon></a>
+              <a (click)="submit()" routerLink="./tab1"><ion-icon name="trash"></ion-icon></a></td>
+          </tr>
+      </tbody>
+    </table>
+  </ion-card>
+</ion-content>

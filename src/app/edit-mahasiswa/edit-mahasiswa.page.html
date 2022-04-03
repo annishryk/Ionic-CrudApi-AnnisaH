@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons>
+      <ion-button routerLink="/tabs/tab1">
+        <ion-icon name="chevron-back-sharp"></ion-icon>
+        Edit - Data Mahasiswa
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-content [fullscreen]="true">
+
+    <ion-card>
+          
+    <ion-card>
+      <div class="mb-3">
+        <label class="form-label">Nama lengkap</label>
+        <div class="border-left border-bottom border-right">
+          <ion-item>
+            <ion-input clearInput [(ngModel)]="nama" value="clear me"></ion-input>
+            <ion-icon name='person'></ion-icon>
+          </ion-item>
+        </div>
+        <div id="emailHelp" class="form-text"><i>*Nama lengkap jangan disingkat</i></div>
+      </div>
+    </ion-card>
+
+    <ion-card>
+      <div class="mb-3">
+        <label class="form-label">Jurusan</label>
+        <div class="border-left border-bottom border-right">
+          <ion-item>
+            <ion-input clearInput [(ngModel)]="jurusan" value="clear me"></ion-input>
+            <ion-icon name='library'></ion-icon>
+          </ion-item>
+        </div>
+        <div id="emailHelp" class="form-text"><i>*Silahkan isi jurusan, ex: Komputer atau Informatika, Ilmu Ekonomi, Ilmu Manajemen </i></div>
+      </div>
+    </ion-card>
+
+    <ion-card>
+      <div class="mb-3">
+        <label class="form-label">Program Studi</label>
+        <div class="border-left border-bottom border-right">
+          <ion-item>
+            <ion-input clearInput [(ngModel)]="prodi" value="clear me"></ion-input>
+            <ion-icon name='book'></ion-icon>
+          </ion-item>
+        </div>
+        <div id="emailHelp" class="form-text"><i>*Silahkan isi jurusan, ex: Teknik Informatika, Sistem Informasi, Teknik Komputer, Ekonomi, Manajemen </i></div>
+      </div>
+    </ion-card>
+
+    <ion-card>
+      <div class="mb-3">
+        <label class="form-label">Kelas</label>
+        <div class="border-left border-bottom border-right">
+          <ion-item>
+            <ion-input clearInput [(ngModel)]="kelas" value="clear me"></ion-input>
+            <ion-icon name='calendar'></ion-icon>
+          </ion-item>
+        </div>
+        <div id="emailHelp" class="form-text"><i>*Silahkan masukan dengan format, ex: A / B / C</i></div>
+      </div>
+    </ion-card>
+    <ion-button (click)="update()" color="success" size="small">
+      Update
+    </ion-button>
+    </ion-card>
+  </ion-content>
+
